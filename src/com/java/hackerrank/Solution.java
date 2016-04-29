@@ -1,4 +1,4 @@
-package com.java.test;
+package com.java.hackerrank;
 
 import java.io.*;
 import java.util.*;
