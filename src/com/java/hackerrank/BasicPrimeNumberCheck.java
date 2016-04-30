@@ -9,22 +9,26 @@ public class BasicPrimeNumberCheck {
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
 		boolean flag = false;
-		
-		if(num%2 != 0){
-			for (int i = 3; i < num - 1 ; i++) {
-				if(num % i == 0)
-					break;
-				else
-					flag = true;
+
+		if (num % 2 != 0) {
+			for (int i = 3; i < num/2 ; i++) {
+				if ((num != i)) {
+					if (num % i == 0) {
+						flag = true;
+						break;
+					}
+				}
+
 			}
-		}else{
-			System.out.println(num+ " is not prime!!");
+			
+			if (flag)
+				System.out.println(num + " is not prime!!");
+			else
+				System.out.println(num + " is prime!!");
+		} else {
+			System.out.println(num + " is not prime!!");
 		}
-		
-		if(flag)
-			System.out.println(num + " is prime!!");
-		else
-			System.out.println(num+ " is not prime!!");
+
 	}
 
 }
