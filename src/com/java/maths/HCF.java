@@ -7,7 +7,9 @@ import java.util.*;
 public class HCF {
 	public static void main(String Args[]) {
 		System.out.println("Enter 2 numbers");
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
+		long result = 0L;
 		int m = sc.nextInt();
 		int n = sc.nextInt();
 		
@@ -17,8 +19,9 @@ public class HCF {
 		input[1] = n;
 		
 		for (int i = 0; i < input.length; i++) {
-			long result = gcd(input[i],n);
+			result = gcd(input[i],n);
 		}	
+		System.out.println("Result = "+result);
 		/*int h = 1;
 		int p = m * n;
 		for (int i = 2; i < p; i++) {
