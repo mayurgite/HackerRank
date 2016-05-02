@@ -1,5 +1,6 @@
 package com.java.maths;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,7 +17,26 @@ public class LCM {
 
 	public static void main(String[] args) {
 
+		System.out.println("Enter two numbers:: ");
+		
 		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
+		
+		int num1 = scan.nextInt();
+		int num2 = scan.nextInt();
+		int hcf = 0, lcm = 0;
+		int prod = num1 * num2;
+		
+		while (num1 > 0) {
+			int temp = num1;
+			num1 = num2 % num1;
+			//Num1 wil be HCF
+			num2 = temp;
+		}
+		lcm = prod/hcf;
+		System.out.println("HCF = "+hcf + "  LCM = "+lcm);
+/*		
+        @SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		SortedSet<Integer> numbers = new TreeSet<Integer>();
 		List<Integer> multiples = new ArrayList<Integer>();
@@ -71,6 +91,7 @@ public class LCM {
 			result = result * res;
 		}
 		System.out.println("LCM = " + result);
+	*/
 	}
 
 }
